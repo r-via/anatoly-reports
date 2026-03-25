@@ -4,13 +4,10 @@
 
 # Anatoly Audit Report
 
-## Executive Summary
+> **41 files** reviewed in **23 min** — **$9.17** in AI analysis so you don't have to.
+> Verdict: **CRITICAL** · 1 critical bug found · 7 files with findings
 
-- **Files reviewed:** 41
-- **Global verdict:** CRITICAL
-- **Clean files:** 34
-- **Files with findings:** 7
-- **Degraded reviews (axis crashes):** 30
+## Findings Summary
 
 | Category | High | Medium | Low | Total |
 |----------|------|--------|-----|-------|
@@ -18,6 +15,25 @@
 | Test coverage gaps | 5 | 0 | 36 | 41 |
 | Best practices | 1 | 0 | 0 | 1 |
 | Documentation gaps | 2 | 1 | 31 | 34 |
+
+## Critical Findings
+
+- 🔴 **rustguard-core/src/replay.rs** `ReplayWindow` — shift_window (lines 109–116) applies the sub-word bit-shift in the WRONG direction with the WRONG iteration order, si...
+- 🟡 **rustguard-cli/src/main.rs** `cmd_serve` — For every value-taking flag (--pool, --token, --xdp, --queues, --port), after the inner `i += 1` the code calls `args...
+- 🟡 **rustguard-cli/src/main.rs** `cmd_join` — Same defect as cmd_serve: if --token is the final argument with no following value, `args.get(i).cloned().unwrap_or_d...
+- 🟡 **rustguard-core/src/cookie.rs** `CookieState` — In no_std builds, process_reply (L195-L196) sets self.received = Some(now()) only under #[cfg(feature = "std")]. Ther...
+- 🟡 **rustguard-core/src/timers.rs** `SessionTimers` — needs_keepalive (L154–L168) contains a self-contradictory guard when last_sent is None. The fallback `sent.unwrap_or(...
+- 🟡 **rustguard-core/src/timers.rs** `REKEY_AFTER_MESSAGES` — Defined as (1u64 << 60) - 1 = 2^60 - 1, but the WireGuard whitepaper specifies REKEY-AFTER-MESSAGES = 2^60. The off-b...
+- 🟡 **rustguard-core/src/timers.rs** `DEAD_SESSION_TIMEOUT` — 240 seconds is shorter than the standard derived value of REJECT_AFTER_TIME + REKEY_ATTEMPT_TIME + REKEY_TIMEOUT = 18...
+
+## Axes
+
+| Axis | Health | Findings | Details |
+|------|--------|----------|---------|
+| Correction | `█████████░` 90% OK | 5 high · 3 med | [View →](./axes/correction/index.md) |
+| Tests | `█████░░░░░` 46% covered | 5 high · 36 low | [View →](./axes/tests/index.md) |
+| Documentation | `████░░░░░░` 41% documented | 2 high · 1 med · 31 low | [View →](./axes/documentation/index.md) |
+| Best Practices | `█████████░` avg 8.7 / 10 | 1 high | [View →](./axes/best-practices/index.md) |
 
 ## Documentation Reference
 
@@ -29,15 +45,6 @@ Documentation coverage:
   Modules: 100% (0/0 modules > 200 LOC in project docs)
 
 Sync status: 17 pages to create
-
-## Axes
-
-| Axis | Files | Shards | Link |
-|------|-------|--------|------|
-| Correction | 4 | 1 | [axes/correction/index.md](./axes/correction/index.md) |
-| Tests | 7 | 1 | [axes/tests/index.md](./axes/tests/index.md) |
-| Documentation | 5 | 1 | [axes/documentation/index.md](./axes/documentation/index.md) |
-| Best Practices | 1 | 1 | [axes/best-practices/index.md](./axes/best-practices/index.md) |
 
 ## Degraded Reviews
 
@@ -74,23 +81,23 @@ Sync status: 17 pages to create
 - `rustguard-tun/src/uring.rs`
 - `rustguard-tun/src/xdp.rs`
 
-## Performance & Triage
+---
 
-| Tier | Files | % |
-|------|-------|---|
-| Skip | 3 | 7% |
-| Evaluate | 38 | 93% |
+<details>
+<summary><strong>Run Details</strong></summary>
 
-Estimated time saved: **0.3 min**
+Run `2026-03-25_162031` · 23.3 min · $9.17
+ · 30 degraded reviews
 
-## Run Statistics
-
-| Metric | Value |
-|--------|-------|
-| Run ID | `2026-03-25_162031` |
-| Duration | 23.3 min |
-| API cost | $9.17 |
-| Degraded reviews | 30 |
+| Axis | Calls | Duration | Cost | Tokens (in/out) |
+|------|-------|----------|------|-----------------|
+| utility | 9 | 3.8m | $0.34 | 81 / 35017 |
+| duplication | 9 | 3.9m | $0.30 | 81 / 36263 |
+| correction | 8 | 16.6m | $1.94 | 16 / 67534 |
+| overengineering | 9 | 5.8m | $0.85 | 18 / 19892 |
+| tests | 9 | 7.8m | $1.29 | 18 / 27958 |
+| best_practices | 9 | 12.5m | $1.47 | 27 / 45407 |
+| documentation | 9 | 12.1m | $2.18 | 18 / 47823 |
 
 **Phase durations:**
 
@@ -103,125 +110,21 @@ Estimated time saved: **0.3 min**
 | review | 561.3s |
 | internal-docs | 3.6s |
 
-**Per-axis breakdown:**
+</details>
 
-| Axis | Calls | Duration | Cost | Tokens (in/out) |
-|------|-------|----------|------|-----------------|
-| utility | 9 | 3.8m | $0.34 | 81 / 35017 |
-| duplication | 9 | 3.9m | $0.30 | 81 / 36263 |
-| correction | 8 | 16.6m | $1.94 | 16 / 67534 |
-| overengineering | 9 | 5.8m | $0.85 | 18 / 19892 |
-| tests | 9 | 7.8m | $1.29 | 18 / 27958 |
-| best_practices | 9 | 12.5m | $1.47 | 27 / 45407 |
-| documentation | 9 | 12.1m | $2.18 | 18 / 47823 |
-
-## Axis Summary
-
-**Utility** — 80 symbols evaluated
-
-| Verdict | Count | % |
-|---------|-------|---|
-| USED | 80 | 100% |
-
-**Duplication** — 80 symbols evaluated
-
-| Verdict | Count | % |
-|---------|-------|---|
-| UNIQUE | 80 | 100% |
-
-**Correction** — 80 symbols evaluated
-
-| Verdict | Count | % |
-|---------|-------|---|
-| OK | 72 | 90% |
-| NEEDS_FIX | 7 | 9% |
-| ERROR | 1 | 1% |
-
-**Overengineering** — 80 symbols evaluated
-
-| Verdict | Count | % |
-|---------|-------|---|
-| LEAN | 75 | 94% |
-| ACCEPTABLE | 5 | 6% |
-
-**Tests** — 76 symbols evaluated
-
-| Verdict | Count | % |
-|---------|-------|---|
-| GOOD | 35 | 46% |
-| WEAK | 28 | 37% |
-| NONE | 13 | 17% |
-
-**Documentation** — 76 symbols evaluated
-
-| Verdict | Count | % |
-|---------|-------|---|
-| DOCUMENTED | 31 | 41% |
-| PARTIAL | 26 | 34% |
-| UNDOCUMENTED | 19 | 25% |
-
-**Best Practices** — 9 files evaluated
-
-| Metric | Value |
-|--------|-------|
-| Average score | 8.7/10 |
-| Min / Max | 6.0 / 10.0 |
-
-## Deliberation
-
-| Metric | Value |
-|--------|-------|
-| Files deliberated | 5 |
-| Symbols reclassified | 5 |
-| Actions removed | 0 |
-| Verdict changes | 1 |
-
-**Verdict changes:**
-
-- `rustguard-core/src/session.rs`: CLEAN → NEEDS_REFACTOR
-
-**Reclassified files:**
-
-- `rustguard-core/src/cookie.rs`: 5 symbol(s) — Overall assessment: The file is a well-structured WireGuard cookie implementation with one genuine correctness issue. CookieState's process_reply has a no_std bug where self.received is never set, causing compute_mac2 to silently return zeros even after successful cookie decryption — this is the primary NEEDS_FIX driving the NEEDS_REFACTOR verdict. Multiple UNDOCUMENTED findings on private helper functions were reclassified to DOCUMENTED under private-item leniency: these are trivial wrappers with self-descriptive names (now, elapsed_since, random_bytes, constant_time_eq_16) or already have doc comments that were overlooked (fill_random std variant). WEAK test findings are preserved where justified — verify_mac1 has zero coverage, IPv6 encoding is untested, and the no_std cookie path has no tests. All five actions remain valid: the correction action for CookieState no_std and four documentation hygiene actions for public API items.
-
----
-
-## Methodology
+<details>
+<summary><strong>Methodology</strong></summary>
 
 Each file is evaluated through 7 independent axis evaluators running in parallel.
-Every symbol (function, class, variable, type) is analysed individually and receives a rating per axis along with a confidence score (0–100).
-Findings with confidence < 30 are discarded; those with confidence < 60 are excluded from verdict computation.
+Every symbol is analysed individually with a confidence score (0–100).
+Findings below 30% confidence are discarded; those below 60% are excluded from verdicts.
 
-| Axis | Model | Ratings | Description |
-|------|-------|---------|-------------|
-| Utility | haiku | USED / DEAD / LOW_VALUE | Is this symbol actually used in the codebase? |
-| Duplication | haiku | UNIQUE / DUPLICATE | Is this symbol a copy of logic that exists elsewhere? |
-| Correction | sonnet | OK / NEEDS_FIX / ERROR | Does this symbol contain bugs or correctness issues? |
-| Overengineering | haiku | LEAN / OVER / ACCEPTABLE | Is the implementation unnecessarily complex? |
-| Tests | haiku | GOOD / WEAK / NONE | Does this symbol have adequate test coverage? |
-| Best Practices | sonnet | Score 0–10 | Does the file follow Rust best practices? |
-| Documentation | haiku | DOCUMENTED / PARTIAL / UNDOCUMENTED | Are exported symbols properly documented with `///` doc comments? |
+**Verdicts:** CLEAN (no findings) · NEEDS_REFACTOR (confirmed findings) · CRITICAL (ERROR-level bugs)
 
-See each axis folder for detailed rating criteria and methodology.
+**Severity:** High = ERROR or high-confidence NEEDS_FIX/DEAD/DUPLICATE · Medium = lower confidence or OVER · Low = minor
 
-### Severity Classification
+See each axis folder for detailed rating criteria.
 
-- **High**: ERROR corrections, or NEEDS_FIX / DEAD / DUPLICATE with confidence >= 80%.
-- **Medium**: NEEDS_FIX / DEAD / DUPLICATE with confidence < 80%, or OVER (any confidence).
-- **Low**: LOW_VALUE utility or remaining minor findings.
+</details>
 
-### Verdict Rules
-
-- **CLEAN**: No actionable findings with confidence >= 60%.
-- **NEEDS_REFACTOR**: At least one confirmed finding (DEAD, DUPLICATE, OVER, or NEEDS_FIX) with confidence >= 60%.
-- **CRITICAL**: At least one ERROR correction found.
-
-### Inter-axis Coherence
-
-After individual evaluation, coherence rules reconcile contradictions:
-
-- If utility = DEAD, tests is forced to NONE (no point testing dead code).
-- If utility = DEAD, documentation is forced to UNDOCUMENTED (no point documenting dead code).
-- If correction = ERROR, overengineering is forced to ACCEPTABLE (complexity is secondary to correctness).
-
-*Generated: 2026-03-25T15:43:47.011Z*
+*Generated: 2026-03-25T15:43:47.013Z*
