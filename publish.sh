@@ -154,18 +154,22 @@ ISSUE_BODY="Hey! I'm Rémi. I built [Anatoly](https://github.com/r-via/anatoly),
 I ran a full audit on your project and here's what Anatoly found. I hope it helps! If anything catches your eye, I'd love to hear your thoughts.
 "
 
-# Extract Executive Summary (between ## Executive Summary and next ##)
-SUMMARY="$(echo "$REPORT_CONTENT" | sed -n '/^## Executive Summary$/,/^## /{/^## Executive Summary$/p;/^## [^E]/!p}' | head -n -1)"
+# Extract Executive Summary content (between ## Executive Summary and next ##, excluding headers)
+SUMMARY="$(echo "$REPORT_CONTENT" | sed -n '/^## Executive Summary$/,/^## /{/^## /d;p}' | sed '/^$/N;/^\n$/d')"
 if [[ -n "$SUMMARY" ]]; then
   ISSUE_BODY+="
+## Executive Summary
+
 ${SUMMARY}
 "
 fi
 
-# Extract Axis Summary
-AXIS_SUMMARY="$(echo "$REPORT_CONTENT" | sed -n '/^## Axis Summary$/,/^## /{/^## Axis Summary$/p;/^## [^A]/!p}' | head -n -1)"
+# Extract Axis Summary content (between ## Axis Summary and next ##, excluding headers)
+AXIS_SUMMARY="$(echo "$REPORT_CONTENT" | sed -n '/^## Axis Summary$/,/^## /{/^## /d;p}' | sed '/^$/N;/^\n$/d')"
 if [[ -n "$AXIS_SUMMARY" ]]; then
   ISSUE_BODY+="
+## Axis Summary
+
 ${AXIS_SUMMARY}
 "
 fi
