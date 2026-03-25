@@ -20,17 +20,6 @@
 | Best practices | 20 | 3 | 0 | 23 |
 | Documentation gaps | 28 | 4 | 117 | 149 |
 
-## Documentation Reference
-
-.anatoly/docs/ updated: 18 pages (18 refreshed)
-
-Documentation coverage:
-  Project docs (docs/): 13% (18/137 symbols)
-  Internal ref (.anatoly/docs/): 78% (107/137 symbols)
-  Modules: 100% (0/0 modules > 200 LOC in project docs)
-
-Sync status: 6 pages to create
-
 ## Axes
 
 | Axis | Files | Shards | Link |
@@ -41,15 +30,6 @@ Sync status: 6 pages to create
 | Tests | 37 | 4 | [axes/tests/index.md](./axes/tests/index.md) |
 | Documentation | 32 | 4 | [axes/documentation/index.md](./axes/documentation/index.md) |
 | Best Practices | 15 | 2 | [axes/best-practices/index.md](./axes/best-practices/index.md) |
-
-## Performance & Triage
-
-| Tier | Files | % |
-|------|-------|---|
-| Skip | 3 | 7% |
-| Evaluate | 38 | 93% |
-
-Estimated time saved: **0.3 min**
 
 ## Run Statistics
 
@@ -69,18 +49,19 @@ Estimated time saved: **0.3 min**
 | rag-index | 801.3s |
 | review | 3476.5s |
 | internal-docs | 172.5s |
+| report | 69ms |
 
 **Per-axis breakdown:**
 
 | Axis | Calls | Duration | Cost | Tokens (in/out) |
 |------|-------|----------|------|-----------------|
-| utility | 38 | 38.9m | $2.05 | 953970 / 319883 |
-| duplication | 38 | 26.3m | $1.69 | 1019687 / 232156 |
-| correction | 38 | 129.1m | $14.58 | 825914 / 530237 |
-| overengineering | 38 | 24.7m | $3.72 | 817267 / 92575 |
-| tests | 38 | 26.7m | $4.62 | 917621 / 104317 |
-| best_practices | 38 | 76.7m | $8.22 | 869468 / 268783 |
-| documentation | 38 | 40.4m | $6.61 | 959743 / 173248 |
+| utility | 38 | 38.9m | $2.05 | 349 / 319883 |
+| duplication | 38 | 26.3m | $1.69 | 350 / 232156 |
+| correction | 38 | 129.1m | $14.58 | 87 / 530237 |
+| overengineering | 38 | 24.7m | $3.72 | 107 / 92575 |
+| tests | 38 | 26.7m | $4.62 | 83 / 104317 |
+| best_practices | 38 | 76.7m | $8.22 | 117 / 268783 |
+| documentation | 38 | 40.4m | $6.61 | 83 / 173248 |
 
 ## Axis Summary
 
@@ -221,4 +202,4 @@ After individual evaluation, coherence rules reconcile contradictions:
 - If utility = DEAD, documentation is forced to UNDOCUMENTED (no point documenting dead code).
 - If correction = ERROR, overengineering is forced to ACCEPTABLE (complexity is secondary to correctness).
 
-*Generated: 2026-03-25T11:09:23.555Z*
+*Generated: 2026-03-25T14:30:01.970Z*
