@@ -149,9 +149,9 @@ fi
 REPORT_CONTENT="$(cat "$REPORT_PATH")"
 
 # Build issue body
-ISSUE_BODY="Hey! My name is Rémi. I created [Anatoly](https://github.com/r-via/anatoly), a free open-source audit tool for codebases. It helps clean up vibe-coded projects by checking for common issues across multiple axes — things like dead code, duplications, missing docs, correctness bugs, over-engineering, test gaps, and best practices.
+ISSUE_BODY="Hey! I'm Rémi. I built [Anatoly](https://github.com/r-via/anatoly), an AI agent that deep-audits your entire codebase in one command. It catches what linters miss: dead code, hidden duplications, correctness bugs, over-engineering, test gaps, and more. Every single finding is backed by evidence, not guesswork.
 
-I ran it on your project and here is the report. Hopefully you will find something useful in there! Feel free to reach out if you have any questions or feedback.
+I ran a full audit on your project and here's what Anatoly found. I hope it helps! If anything catches your eye, I'd love to hear your thoughts.
 "
 
 # Extract Executive Summary (between ## Executive Summary and next ##)
