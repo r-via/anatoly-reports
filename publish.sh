@@ -41,13 +41,14 @@ else
   fi
 fi
 
-if [[ ! -f "${RUN_DIR}/report.md" ]]; then
-  echo "Error: No report.md found in ${RUN_DIR}. Run 'anatoly run' first." >&2
+PUBLIC_REPORT="${RUN_DIR}/public_report.md"
+if [[ ! -f "$PUBLIC_REPORT" ]]; then
+  echo "Error: No public_report.md found in ${RUN_DIR}." >&2
+  echo "Make sure you have a recent version of Anatoly that generates public_report.md." >&2
   exit 1
 fi
 
 RUN_ID="$(basename "$RUN_DIR")"
-REPORT_PATH="${RUN_DIR}/report.md"
 
 # ── Detect upstream repo ────────────────────────────────────────────────────
 detect_nwo() {
@@ -118,8 +119,8 @@ git clone --depth 1 "$REPORTS_REPO_URL" "$TMPDIR" --quiet
 DEST_DIR="${TMPDIR}/${REPORT_SUBDIR}"
 mkdir -p "$DEST_DIR"
 
-# Copy report + axes
-cp "$REPORT_PATH" "$DEST_DIR/report.md"
+# Copy public report + axes
+cp "$PUBLIC_REPORT" "$DEST_DIR/report.md"
 if [[ -d "${RUN_DIR}/axes" ]]; then
   cp -r "${RUN_DIR}/axes" "$DEST_DIR/axes"
 fi
@@ -146,31 +147,20 @@ if $NO_ISSUE; then
   exit 0
 fi
 
-REPORT_CONTENT="$(cat "$REPORT_PATH")"
+REPORT_CONTENT="$(cat "$PUBLIC_REPORT")"
 
-# Build issue body
+# Build issue body: intro + public_report content (without logo, without Run Details, without Methodology)
 ISSUE_BODY="Hey! I'm Rémi. I built [Anatoly](https://github.com/r-via/anatoly), an AI agent that deep-audits your entire codebase in one command. It catches what linters miss: dead code, hidden duplications, correctness bugs, over-engineering, test gaps, and more. Every single finding is backed by evidence, not guesswork.
 
 I ran a full audit on your project and here's what Anatoly found. I hope it helps! If anything catches your eye, I'd love to hear your thoughts.
 "
 
-# Extract Executive Summary content (between ## Executive Summary and next ##, excluding headers)
-SUMMARY="$(echo "$REPORT_CONTENT" | sed -n '/^## Executive Summary$/,/^## /{/^## /d;p}' | sed '/^$/N;/^\n$/d')"
-if [[ -n "$SUMMARY" ]]; then
+# Extract the core content: everything from the blockquote intro to just before <details>
+# Skip the logo header, keep the blockquote + all sections
+CORE="$(echo "$REPORT_CONTENT" | sed -n '/^>/,$ p' | sed '/^<details>/,$ d' | sed '/^---$/,$ d')"
+if [[ -n "$CORE" ]]; then
   ISSUE_BODY+="
-## Executive Summary
-
-${SUMMARY}
-"
-fi
-
-# Extract Axis Summary content (between ## Axis Summary and next ##, excluding headers)
-AXIS_SUMMARY="$(echo "$REPORT_CONTENT" | sed -n '/^## Axis Summary$/,/^## /{/^## /d;p}' | sed '/^$/N;/^\n$/d')"
-if [[ -n "$AXIS_SUMMARY" ]]; then
-  ISSUE_BODY+="
-## Axis Summary
-
-${AXIS_SUMMARY}
+${CORE}
 "
 fi
 
