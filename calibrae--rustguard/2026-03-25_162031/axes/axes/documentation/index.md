@@ -29,4 +29,4 @@ Evaluates `///` doc comment coverage on exported symbols and optional /docs/ con
 - **PARTIAL**: `///` doc comment exists but is incomplete (missing params, outdated description, or lacking return type).
 - **UNDOCUMENTED**: No `///` doc comment found for an exported symbol. Types and interfaces default to DOCUMENTED.
 
-*Generated: 2026-03-25T15:43:47.017Z*
+*Generated: 2026-03-25T16:46:15.929Z*

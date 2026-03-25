@@ -5,16 +5,19 @@
 # Anatoly Audit Report
 
 > **41 files** reviewed in **23 min** — **$9.17** in AI analysis so you don't have to.
-> Verdict: **CRITICAL** · 1 critical bug found · 7 files with findings
+> Verdict: **CRITICAL** · 1 critical bug found · 84 findings in 7 files
 
-## Findings Summary
+## Axes
 
-| Category | High | Medium | Low | Total |
-|----------|------|--------|-----|-------|
-| Correction errors | 5 | 3 | 0 | 8 |
-| Test coverage gaps | 5 | 0 | 36 | 41 |
-| Best practices | 1 | 0 | 0 | 1 |
-| Documentation gaps | 2 | 1 | 31 | 34 |
+| Axis | Health | Findings | Details |
+|------|--------|----------|---------|
+| Correction | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ 90% OK | 5 high · 3 med | [View →](./axes/correction/index.md) |
+| Utility | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 100% used | All clear | — |
+| Duplication | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 100% unique | All clear | — |
+| Overengineering | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 94% lean · 6% acceptable | All clear | — |
+| Tests | 🟥🟥🟥🟥🟥⬜⬜⬜⬜⬜ 46% covered | 5 high · 36 low | [View →](./axes/tests/index.md) |
+| Documentation | 🟥🟥🟥🟥⬜⬜⬜⬜⬜⬜ 41% documented | 2 high · 1 med · 31 low | [View →](./axes/documentation/index.md) |
+| Best Practices | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ avg 8.7 / 10 | 1 high | [View →](./axes/best-practices/index.md) |
 
 ## Critical Findings
 
@@ -26,60 +29,42 @@
 - 🟡 **rustguard-core/src/timers.rs** `REKEY_AFTER_MESSAGES` — Defined as (1u64 << 60) - 1 = 2^60 - 1, but the WireGuard whitepaper specifies REKEY-AFTER-MESSAGES = 2^60. The off-b...
 - 🟡 **rustguard-core/src/timers.rs** `DEAD_SESSION_TIMEOUT` — 240 seconds is shorter than the standard derived value of REJECT_AFTER_TIME + REKEY_ATTEMPT_TIME + REKEY_TIMEOUT = 18...
 
-## Axes
-
-| Axis | Health | Findings | Details |
-|------|--------|----------|---------|
-| Correction | `█████████░` 90% OK | 5 high · 3 med | [View →](./axes/correction/index.md) |
-| Tests | `█████░░░░░` 46% covered | 5 high · 36 low | [View →](./axes/tests/index.md) |
-| Documentation | `████░░░░░░` 41% documented | 2 high · 1 med · 31 low | [View →](./axes/documentation/index.md) |
-| Best Practices | `█████████░` avg 8.7 / 10 | 1 high | [View →](./axes/best-practices/index.md) |
-
-## Documentation Reference
-
-.anatoly/docs/ updated: 18 pages (18 refreshed)
-
-Documentation coverage:
-  Project docs (docs/): 77% (106/137 symbols)
-  Internal ref (.anatoly/docs/): 91% (125/137 symbols)
-  Modules: 100% (0/0 modules > 200 LOC in project docs)
-
-Sync status: 17 pages to create
+> Showing top 7 of 8 correction findings. See [axes/correction/](./axes/correction/index.md) for the full list.
 
 ## Degraded Reviews
 
 > One or more axis evaluators crashed for these files. Verdicts may be unreliable — re-run recommended.
 
-- `rustguard-core/src/handshake.rs`
-- `rustguard-crypto/src/aead.rs`
-- `rustguard-crypto/src/blake2s.rs`
-- `rustguard-crypto/src/tai64n.rs`
-- `rustguard-crypto/src/x25519.rs`
-- `rustguard-daemon/src/config.rs`
-- `rustguard-daemon/src/peer.rs`
-- `rustguard-daemon/src/tunnel.rs`
-- `rustguard-enroll/src/client.rs`
-- `rustguard-enroll/src/control.rs`
-- `rustguard-enroll/src/fast_udp.rs`
-- `rustguard-enroll/src/packet.rs`
-- `rustguard-enroll/src/pool.rs`
-- `rustguard-enroll/src/protocol.rs`
-- `rustguard-enroll/src/server.rs`
-- `rustguard-enroll/src/state.rs`
-- `rustguard-kmod/src/allowedips.rs`
-- `rustguard-kmod/src/cookie.rs`
-- `rustguard-kmod/src/lib.rs`
-- `rustguard-kmod/src/noise.rs`
-- `rustguard-kmod/src/replay.rs`
-- `rustguard-kmod/src/timers.rs`
-- `rustguard-tun/examples/tun_echo.rs`
-- `rustguard-tun/src/bpf_loader.rs`
-- `rustguard-tun/src/lib.rs`
-- `rustguard-tun/src/linux_mq.rs`
-- `rustguard-tun/src/linux.rs`
-- `rustguard-tun/src/macos.rs`
-- `rustguard-tun/src/uring.rs`
-- `rustguard-tun/src/xdp.rs`
+- `rustguard-core/src/handshake.rs` — crashed: correction
+- `rustguard-crypto/src/aead.rs` — crashed: utility, duplication, correction, overengineering, tests, documentation
+- `rustguard-crypto/src/blake2s.rs` — crashed: utility, duplication, correction, overengineering, tests, documentation
+- `rustguard-crypto/src/tai64n.rs` — crashed: utility, duplication, correction, overengineering, tests, documentation
+- `rustguard-crypto/src/x25519.rs` — crashed: utility, duplication, correction, overengineering, tests, documentation
+- `rustguard-daemon/src/config.rs` — crashed: utility, duplication, correction, overengineering, tests, documentation
+- `rustguard-daemon/src/peer.rs` — crashed: utility, duplication, correction, overengineering, tests, documentation
+- `rustguard-daemon/src/tunnel.rs` — crashed: utility, duplication, correction, overengineering, tests, documentation
+- `rustguard-enroll/src/client.rs` — crashed: utility, duplication, correction, overengineering, tests, documentation
+- `rustguard-enroll/src/control.rs` — crashed: utility, duplication, correction, overengineering, tests, documentation
+- `rustguard-enroll/src/fast_udp.rs` — crashed: utility, duplication, correction, overengineering, tests, documentation
+- `rustguard-enroll/src/packet.rs` — crashed: utility, duplication, correction, overengineering, tests, documentation
+- `rustguard-enroll/src/pool.rs` — crashed: utility, duplication, correction, overengineering, tests, documentation
+- `rustguard-enroll/src/protocol.rs` — crashed: utility, duplication, correction, overengineering, tests, documentation
+- `rustguard-enroll/src/server.rs` — crashed: utility, duplication, correction, overengineering, tests, documentation
+- `rustguard-enroll/src/state.rs` — crashed: utility, duplication, correction, overengineering, tests, documentation
+- `rustguard-kmod/src/allowedips.rs` — crashed: utility, duplication, correction, overengineering, tests, documentation
+- `rustguard-kmod/src/cookie.rs` — crashed: utility, duplication, correction, overengineering, tests, documentation
+- `rustguard-kmod/src/lib.rs` — crashed: utility, duplication, correction, overengineering, tests, documentation
+- `rustguard-kmod/src/noise.rs` — crashed: utility, duplication, correction, overengineering, tests, documentation
+- `rustguard-kmod/src/replay.rs` — crashed: utility, duplication, correction, overengineering, tests, documentation
+- `rustguard-kmod/src/timers.rs` — crashed: utility, duplication, correction, overengineering, tests, documentation
+- `rustguard-tun/examples/tun_echo.rs` — crashed: utility, duplication, correction, overengineering, tests, documentation
+- `rustguard-tun/src/bpf_loader.rs` — crashed: utility, duplication, correction, overengineering, tests, documentation
+- `rustguard-tun/src/lib.rs` — crashed: utility, duplication, correction, overengineering, tests, documentation
+- `rustguard-tun/src/linux_mq.rs` — crashed: utility, duplication, correction, overengineering, tests, documentation
+- `rustguard-tun/src/linux.rs` — crashed: utility, duplication, correction, overengineering, tests, documentation
+- `rustguard-tun/src/macos.rs` — crashed: utility, duplication, correction, overengineering, tests, documentation
+- `rustguard-tun/src/uring.rs` — crashed: utility, duplication, correction, overengineering, tests, documentation
+- `rustguard-tun/src/xdp.rs` — crashed: utility, duplication, correction, overengineering, tests, documentation
 
 ---
 
@@ -109,6 +94,7 @@ Run `2026-03-25_162031` · 23.3 min · $9.17
 | rag-index | 828.2s |
 | review | 561.3s |
 | internal-docs | 3.6s |
+| report | 34ms |
 
 </details>
 
@@ -127,4 +113,4 @@ See each axis folder for detailed rating criteria.
 
 </details>
 
-*Generated: 2026-03-25T15:43:47.013Z*
+*Generated: 2026-03-25T16:46:15.926Z*
