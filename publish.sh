@@ -119,11 +119,19 @@ git clone --depth 1 "$REPORTS_REPO_URL" "$TMPDIR" --quiet
 DEST_DIR="${TMPDIR}/${REPORT_SUBDIR}"
 mkdir -p "$DEST_DIR"
 
-# Copy public report + axes
+# Copy public report + axes + docs
 cp "$PUBLIC_REPORT" "$DEST_DIR/report.md"
 if [[ -d "${RUN_DIR}/axes" ]]; then
   cp -r "${RUN_DIR}/axes" "$DEST_DIR/axes"
 fi
+if [[ -d ".anatoly/docs" ]]; then
+  cp -r ".anatoly/docs" "$DEST_DIR/docs"
+fi
+
+DOCS_URL="https://github.com/${REPORTS_REPO}/blob/main/${REPORT_SUBDIR}/docs/index.md"
+
+# Update docs link in published report (replace relative ./docs/index.md with absolute URL)
+sed -i "s|\./docs/index\.md|${DOCS_URL}|g" "$DEST_DIR/report.md"
 
 # Commit and push
 cd "$TMPDIR"
