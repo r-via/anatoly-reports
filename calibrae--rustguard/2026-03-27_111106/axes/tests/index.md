@@ -7,6 +7,8 @@
 
 ## Shards
 
+Findings are split into shards of up to 10 files each to keep pages readable and avoid GitHub rendering limits.
+
 - [ ] [shard.1.md](./shard.1.md) (10 files — 4 CRITICAL, 6 NEEDS_REFACTOR)
 - [ ] [shard.2.md](./shard.2.md) (10 files — 10 NEEDS_REFACTOR)
 - [ ] [shard.3.md](./shard.3.md) (10 files — 10 NEEDS_REFACTOR)
@@ -34,4 +36,4 @@ Assesses test coverage quality using coverage data (when available) and test fil
 - **WEAK**: Tests exist but are superficial, missing edge cases, or testing implementation details rather than behavior.
 - **NONE**: No test file or test cases found for this symbol. Types/interfaces with no runtime behavior default to GOOD.
 
-*Generated: 2026-03-27T13:15:39.336Z*
+*Generated: 2026-03-27T13:18:57.710Z*

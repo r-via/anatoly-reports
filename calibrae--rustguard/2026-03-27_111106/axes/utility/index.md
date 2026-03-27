@@ -7,6 +7,8 @@
 
 ## Shards
 
+Findings are split into shards of up to 10 files each to keep pages readable and avoid GitHub rendering limits.
+
 - [ ] [shard.1.md](./shard.1.md) (3 files — 1 CRITICAL, 2 NEEDS_REFACTOR)
 
 ## Verdict Distribution
@@ -30,4 +32,4 @@ Detects dead or low-value code using a pre-computed import/usage graph.
 - **DEAD**: The symbol is exported but imported by 0 files, or is a non-exported symbol with no local references. Likely safe to remove.
 - **LOW_VALUE**: The symbol is used but provides negligible value (trivial wrapper, identity function, unnecessary indirection).
 
-*Generated: 2026-03-27T13:15:39.334Z*
+*Generated: 2026-03-27T13:18:57.708Z*

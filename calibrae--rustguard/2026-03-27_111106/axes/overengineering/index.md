@@ -7,6 +7,8 @@
 
 ## Shards
 
+Findings are split into shards of up to 10 files each to keep pages readable and avoid GitHub rendering limits.
+
 - [ ] [shard.1.md](./shard.1.md) (2 files — 2 NEEDS_REFACTOR)
 
 ## Verdict Distribution
@@ -31,4 +33,4 @@ Evaluates whether complexity is justified by actual requirements.
 - **OVER**: Unnecessary abstractions, premature generalization, factory patterns for single use, excessive configuration for simple behavior.
 - **ACCEPTABLE**: Some complexity present but justified by requirements.
 
-*Generated: 2026-03-27T13:15:39.336Z*
+*Generated: 2026-03-27T13:18:57.709Z*

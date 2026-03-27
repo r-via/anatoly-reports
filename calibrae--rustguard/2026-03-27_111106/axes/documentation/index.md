@@ -7,6 +7,8 @@
 
 ## Shards
 
+Findings are split into shards of up to 10 files each to keep pages readable and avoid GitHub rendering limits.
+
 - [ ] [shard.1.md](./shard.1.md) (10 files — 4 CRITICAL, 6 NEEDS_REFACTOR)
 - [ ] [shard.2.md](./shard.2.md) (10 files — 10 NEEDS_REFACTOR)
 - [ ] [shard.3.md](./shard.3.md) (10 files — 10 NEEDS_REFACTOR)
@@ -34,4 +36,4 @@ Evaluates `///` doc comment coverage on exported symbols and optional /docs/ con
 - **PARTIAL**: `///` doc comment exists but is incomplete (missing params, outdated description, or lacking return type).
 - **UNDOCUMENTED**: No `///` doc comment found for an exported symbol. Types and interfaces default to DOCUMENTED.
 
-*Generated: 2026-03-27T13:15:39.340Z*
+*Generated: 2026-03-27T13:18:57.714Z*
