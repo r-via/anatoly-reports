@@ -4,7 +4,7 @@
 
 # Anatoly Audit Report
 
-> **41 files** reviewed in **1 min** — **$0.00** in AI analysis so you don't have to.
+> **41 files** reviewed in **0 min** — **$0.00** in AI analysis so you don't have to.
 > Verdict: **CRITICAL** · 4 critical bugs found · 472 findings in 37 files
 
 ## Axes
@@ -55,23 +55,23 @@ Anatoly also generates reference pages in `.anatoly/docs/` for every reviewed mo
 
 Anatoly generated a complete documentation for this project during the audit.
 
-**[Browse the documentation →](https://github.com/r-via/anatoly-reports/blob/main/calibrae--rustguard/2026-03-27_150255/docs/index.md)**
+**[Browse the documentation →](./docs/index.md)**
 
 ---
 
 <details>
 <summary><strong>Run Details</strong></summary>
 
-Run `2026-03-27_150255` · 0.6 min · $0.00
+Run `2026-03-27_151008` · 0.2 min · $0.00
 
 **Phase durations:**
 
 | Phase | Duration |
 |-------|----------|
-| scan | 111ms |
-| estimate | 225ms |
+| scan | 120ms |
+| estimate | 237ms |
 | triage | 5ms |
-| rag-index | 7.6s |
+| rag-index | 7.1s |
 
 </details>
 
@@ -90,4 +90,4 @@ See each axis folder for detailed rating criteria.
 
 </details>
 
-*Generated: 2026-03-27T14:03:32.248Z*
+*Generated: 2026-03-27T14:10:17.798Z*

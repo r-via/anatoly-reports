@@ -1,9 +1,9 @@
 [← Back to report](../../public_report.md)
 
-# 🧪 Tests
+# 📝 Documentation
 
 - 📁 **Files with findings:** 35
-- 🎯 **Actions:** 0
+- 🎯 **Actions:** 48
 
 ## 📦 Shards
 
@@ -18,9 +18,9 @@ Findings are split into shards of up to 10 files each to keep pages readable and
 
 | Verdict | Count | % |
 |---------|-------|---|
-| GOOD | 136 | 37% |
-| WEAK | 111 | 30% |
-| NONE | 119 | 33% |
+| DOCUMENTED | 190 | 52% |
+| PARTIAL | 124 | 34% |
+| UNDOCUMENTED | 53 | 14% |
 
 ---
 
@@ -28,12 +28,12 @@ Findings are split into shards of up to 10 files each to keep pages readable and
 
 **Model:** haiku
 
-Assesses test coverage quality using coverage data (when available) and test file analysis.
+Evaluates `///` doc comment coverage on exported symbols and optional /docs/ concept coverage.
 
 ### Rating Criteria
 
-- **GOOD**: Meaningful unit tests covering happy path and edge cases.
-- **WEAK**: Tests exist but are superficial, missing edge cases, or testing implementation details rather than behavior.
-- **NONE**: No test file or test cases found for this symbol. Types/interfaces with no runtime behavior default to GOOD.
+- **DOCUMENTED**: Symbol has a complete `///` doc comment covering description, params, and return type.
+- **PARTIAL**: `///` doc comment exists but is incomplete (missing params, outdated description, or lacking return type).
+- **UNDOCUMENTED**: No `///` doc comment found for an exported symbol. Types and interfaces default to DOCUMENTED.
 
-*Generated: 2026-03-27T14:03:32.256Z*
+*Generated: 2026-03-27T14:10:17.811Z*

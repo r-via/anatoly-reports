@@ -33,4 +33,4 @@ Evaluates whether complexity is justified by actual requirements.
 - **OVER**: Unnecessary abstractions, premature generalization, factory patterns for single use, excessive configuration for simple behavior.
 - **ACCEPTABLE**: Some complexity present but justified by requirements.
 
-*Generated: 2026-03-27T14:03:32.255Z*
+*Generated: 2026-03-27T14:10:17.806Z*
