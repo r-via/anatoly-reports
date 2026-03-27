@@ -36,4 +36,4 @@ Assesses test coverage quality using coverage data (when available) and test fil
 - **WEAK**: Tests exist but are superficial, missing edge cases, or testing implementation details rather than behavior.
 - **NONE**: No test file or test cases found for this symbol. Types/interfaces with no runtime behavior default to GOOD.
 
-*Generated: 2026-03-27T13:18:57.710Z*
+*Generated: 2026-03-27T13:25:43.756Z*

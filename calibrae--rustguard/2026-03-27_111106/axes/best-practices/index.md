@@ -28,4 +28,4 @@ File-level evaluation against language-specific Rust best-practice rules. Starts
 
 See the language-specific best-practices prompt for the full rule set.
 
-*Generated: 2026-03-27T13:18:57.718Z*
+*Generated: 2026-03-27T13:25:43.765Z*

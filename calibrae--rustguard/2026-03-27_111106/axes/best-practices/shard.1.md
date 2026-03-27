@@ -6,14 +6,14 @@
 
 | File | Verdict | BP Score | Details |
 |------|---------|----------|---------|
-| `rustguard-kmod/src/lib.rs` | CRITICAL | 7.5/10 | [details](../reviews/rustguard-kmod-src-lib.rev.md) |
-| `rustguard-tun/src/xdp.rs` | CRITICAL | 6.5/10 | [details](../reviews/rustguard-tun-src-xdp.rev.md) |
-| `rustguard-daemon/src/tunnel.rs` | NEEDS_REFACTOR | 5/10 | [details](../reviews/rustguard-daemon-src-tunnel.rev.md) |
-| `rustguard-enroll/src/control.rs` | NEEDS_REFACTOR | 6/10 | [details](../reviews/rustguard-enroll-src-control.rev.md) |
-| `rustguard-tun/src/linux.rs` | NEEDS_REFACTOR | 6.5/10 | [details](../reviews/rustguard-tun-src-linux.rev.md) |
-| `rustguard-kmod/src/cookie.rs` | NEEDS_REFACTOR | 6/10 | [details](../reviews/rustguard-kmod-src-cookie.rev.md) |
-| `rustguard-kmod/src/allowedips.rs` | NEEDS_REFACTOR | 9/10 | [details](../reviews/rustguard-kmod-src-allowedips.rev.md) |
-| `rustguard-tun/src/uring.rs` | NEEDS_REFACTOR | 5/10 | [details](../reviews/rustguard-tun-src-uring.rev.md) |
+| `rustguard-kmod/src/lib.rs` | CRITICAL | 7.5/10 | [details](#rustguard-kmodsrclibrs) |
+| `rustguard-tun/src/xdp.rs` | CRITICAL | 6.5/10 | [details](#rustguard-tunsrcxdprs) |
+| `rustguard-daemon/src/tunnel.rs` | NEEDS_REFACTOR | 5/10 | [details](#rustguard-daemonsrctunnelrs) |
+| `rustguard-enroll/src/control.rs` | NEEDS_REFACTOR | 6/10 | [details](#rustguard-enrollsrccontrolrs) |
+| `rustguard-tun/src/linux.rs` | NEEDS_REFACTOR | 6.5/10 | [details](#rustguard-tunsrclinuxrs) |
+| `rustguard-kmod/src/cookie.rs` | NEEDS_REFACTOR | 6/10 | [details](#rustguard-kmodsrccookiers) |
+| `rustguard-kmod/src/allowedips.rs` | NEEDS_REFACTOR | 9/10 | [details](#rustguard-kmodsrcallowedipsrs) |
+| `rustguard-tun/src/uring.rs` | NEEDS_REFACTOR | 5/10 | [details](#rustguard-tunsrcuringrs) |
 
 ## Details
 
