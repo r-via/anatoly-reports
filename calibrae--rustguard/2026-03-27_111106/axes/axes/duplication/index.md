@@ -29,4 +29,4 @@ Identifies code clones via RAG semantic vector search against the codebase index
 - **UNIQUE**: No semantically similar function found, or similarity score < 0.75.
 - **DUPLICATE**: Similarity score >= 0.85 with matching logic/behavior. The duplicate target file and symbol are reported.
 
-*Generated: 2026-03-27T12:36:36.651Z*
+*Generated: 2026-03-27T12:58:34.603Z*

@@ -43,7 +43,7 @@ Anatoly also generates reference pages in `.anatoly/docs/` for every reviewed mo
 |--------|----------|-------------|
 | Complete doc comments | 🟥⬜⬜⬜⬜⬜⬜⬜⬜⬜ 12% (16/137) | Exported symbols with a complete inline doc comment covering description, params, and return |
 | Any doc comment | 🟨🟨🟨🟨🟨🟨🟨🟨⬜⬜ 77% (106/137) | Exported symbols with at least a partial inline doc comment |
-| Module guides | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 100% (7/7) | Modules > 200 LOC with a dedicated documentation page |
+| Module guides | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 100% (7/7) | Modules > 200 LOC with a dedicated page in docs/ |
 | Reference pages | 36 pages | Anatoly-generated module and API reference pages |
 
 > No `docs/` directory found. Copy `.anatoly/docs/` to `docs/` to adopt the generated documentation and speed up future Anatoly runs.
@@ -103,4 +103,4 @@ See each axis folder for detailed rating criteria.
 
 </details>
 
-*Generated: 2026-03-27T12:36:36.647Z*
+*Generated: 2026-03-27T12:58:34.599Z*
