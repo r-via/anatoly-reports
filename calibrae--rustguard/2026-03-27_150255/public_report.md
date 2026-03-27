@@ -4,20 +4,20 @@
 
 # Anatoly Audit Report
 
-> **41 files** reviewed in **85 min** — **$68.53** in AI analysis so you don't have to.
+> **41 files** reviewed in **1 min** — **$0.00** in AI analysis so you don't have to.
 > Verdict: **CRITICAL** · 4 critical bugs found · 472 findings in 37 files
 
 ## Axes
 
 | Axis | Health | Findings | Details |
 |------|--------|----------|---------|
-| Correction | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ 86% OK | 39 high · 14 med | [View →](https://github.com/r-via/anatoly-reports/blob/main/calibrae--rustguard/2026-03-27_111106/axes/correction/index.md) |
-| Utility | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 99% used | 3 high · 1 med | [View →](https://github.com/r-via/anatoly-reports/blob/main/calibrae--rustguard/2026-03-27_111106/axes/utility/index.md) |
-| Duplication | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ 94% unique | 13 high · 9 med | [View →](https://github.com/r-via/anatoly-reports/blob/main/calibrae--rustguard/2026-03-27_111106/axes/duplication/index.md) |
-| Overengineering | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ 93% lean | 1 high · 1 med | [View →](https://github.com/r-via/anatoly-reports/blob/main/calibrae--rustguard/2026-03-27_111106/axes/overengineering/index.md) |
-| Tests | 🟥🟥🟥🟥⬜⬜⬜⬜⬜⬜ 39% covered | 48 high · 20 med · 162 low | [View →](https://github.com/r-via/anatoly-reports/blob/main/calibrae--rustguard/2026-03-27_111106/axes/tests/index.md) |
-| Documentation | 🟨🟨🟨🟨🟨⬜⬜⬜⬜⬜ 52% documented | 24 high · 6 med · 121 low | [View →](https://github.com/r-via/anatoly-reports/blob/main/calibrae--rustguard/2026-03-27_111106/axes/documentation/index.md) |
-| Best Practices | 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ avg 8.1 / 10 | 10 high | [View →](https://github.com/r-via/anatoly-reports/blob/main/calibrae--rustguard/2026-03-27_111106/axes/best-practices/index.md) |
+| Correction | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ 86% OK | 39 high · 14 med | [View →](./axes/correction/index.md) |
+| Utility | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 99% used | 3 high · 1 med | [View →](./axes/utility/index.md) |
+| Duplication | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ 94% unique | 13 high · 9 med | [View →](./axes/duplication/index.md) |
+| Overengineering | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ 93% lean | 1 high · 1 med | [View →](./axes/overengineering/index.md) |
+| Tests | 🟥🟥🟥🟥⬜⬜⬜⬜⬜⬜ 39% covered | 48 high · 20 med · 162 low | [View →](./axes/tests/index.md) |
+| Documentation | 🟨🟨🟨🟨🟨⬜⬜⬜⬜⬜ 52% documented | 24 high · 6 med · 121 low | [View →](./axes/documentation/index.md) |
+| Best Practices | 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ avg 8.1 / 10 | 10 high | [View →](./axes/best-practices/index.md) |
 
 ## Critical Findings
 
@@ -32,7 +32,7 @@
 - 🟡 **rustguard-core/src/timers.rs** `REKEY_TIMEOUT` — The doc comment on L38 states 'Don't try to send with a keypair older than this (REJECT_AFTER_TIME + padding)' but RE...
 - 🟡 **rustguard-core/src/timers.rs** `SessionTimers` — Two bugs in the impl block: (1) needs_keepalive (L160): when last_sent is None, sent.unwrap_or(received) sets last_se...
 
-> Showing top 10 of 53 correction findings. See [axes/correction/](https://github.com/r-via/anatoly-reports/blob/main/calibrae--rustguard/2026-03-27_111106/axes/correction/index.md) for the full list.
+> Showing top 10 of 53 correction findings. See [axes/correction/](./axes/correction/index.md) for the full list.
 
 ## Documentation Coverage
 
@@ -55,36 +55,23 @@ Anatoly also generates reference pages in `.anatoly/docs/` for every reviewed mo
 
 Anatoly generated a complete documentation for this project during the audit.
 
-**[Browse the documentation →](https://github.com/r-via/anatoly-reports/blob/main/calibrae--rustguard/2026-03-27_111106/docs/index.md)**
+**[Browse the documentation →](./docs/index.md)**
 
 ---
 
 <details>
 <summary><strong>Run Details</strong></summary>
 
-Run `2026-03-27_111106` · 85.1 min · $68.53
-
-| Axis | Calls | Duration | Cost | Tokens (in/out) |
-|------|-------|----------|------|-----------------|
-| utility | 38 | 32.1m | $1.76 | 350 / 287969 |
-| duplication | 38 | 21.4m | $1.48 | 350 / 193824 |
-| correction | 38 | 126.2m | $15.08 | 95 / 541190 |
-| overengineering | 38 | 24.2m | $3.63 | 108 / 88253 |
-| tests | 38 | 27.2m | $4.21 | 79 / 98526 |
-| best_practices | 38 | 71.4m | $8.15 | 114 / 269529 |
-| documentation | 38 | 37.1m | $5.44 | 82 / 149903 |
+Run `2026-03-27_150255` · 0.6 min · $0.00
 
 **Phase durations:**
 
 | Phase | Duration |
 |-------|----------|
-| scan | 215ms |
-| estimate | 207ms |
-| triage | 4ms |
-| rag-index | 439.2s |
-| review | 3460.2s |
-| internal-docs | 6ms |
-| report | 66ms |
+| scan | 111ms |
+| estimate | 225ms |
+| triage | 5ms |
+| rag-index | 7.6s |
 
 </details>
 
@@ -103,4 +90,4 @@ See each axis folder for detailed rating criteria.
 
 </details>
 
-*Generated: 2026-03-27T14:00:01.014Z*
+*Generated: 2026-03-27T14:03:32.248Z*
