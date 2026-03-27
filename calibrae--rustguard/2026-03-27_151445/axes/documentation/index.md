@@ -2,6 +2,8 @@
 
 # 📝 Documentation
 
+> Inline doc comment coverage on exported symbols — description, params, and return values.
+
 - 📁 **Files with findings:** 35
 - 🎯 **Actions:** 48
 
@@ -36,4 +38,4 @@ Evaluates `///` doc comment coverage on exported symbols and optional /docs/ con
 - **PARTIAL**: `///` doc comment exists but is incomplete (missing params, outdated description, or lacking return type).
 - **UNDOCUMENTED**: No `///` doc comment found for an exported symbol. Types and interfaces default to DOCUMENTED.
 
-*Generated: 2026-03-27T14:14:55.116Z*
+*Generated: 2026-03-27T14:21:10.404Z*

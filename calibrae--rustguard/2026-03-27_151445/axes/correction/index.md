@@ -2,6 +2,8 @@
 
 # 🐛 Correction
 
+> Bugs, logic errors, incorrect types, and unsafe operations. Only real correctness issues — not style.
+
 - 📁 **Files with findings:** 26
 - 🎯 **Actions:** 66
 
@@ -35,4 +37,4 @@ Finds bugs, logic errors, incorrect types, and unsafe operations. Only flags rea
 - **NEEDS_FIX**: A real bug, logic error, or type mismatch that would cause incorrect behavior at runtime.
 - **ERROR**: A critical bug that would cause a crash, data loss, or security breach.
 
-*Generated: 2026-03-27T14:14:55.105Z*
+*Generated: 2026-03-27T14:21:10.391Z*

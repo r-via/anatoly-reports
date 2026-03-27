@@ -2,6 +2,8 @@
 
 # ♻️ Utility
 
+> Dead or low-value code detected via a pre-computed import/usage graph across the codebase.
+
 - 📁 **Files with findings:** 3
 - 🎯 **Actions:** 4
 
@@ -32,4 +34,4 @@ Detects dead or low-value code using a pre-computed import/usage graph.
 - **DEAD**: The symbol is exported but imported by 0 files, or is a non-exported symbol with no local references. Likely safe to remove.
 - **LOW_VALUE**: The symbol is used but provides negligible value (trivial wrapper, identity function, unnecessary indirection).
 
-*Generated: 2026-03-27T14:14:55.109Z*
+*Generated: 2026-03-27T14:21:10.394Z*

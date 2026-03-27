@@ -11,13 +11,13 @@
 
 | Axis | Health | Findings | Details |
 |------|--------|----------|---------|
-| Correction | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ 86% OK | 39 high · 14 med | [View →](./axes/correction/index.md) |
-| Utility | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 99% used | 3 high · 1 med | [View →](./axes/utility/index.md) |
-| Duplication | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ 94% unique | 13 high · 9 med | [View →](./axes/duplication/index.md) |
-| Overengineering | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ 93% lean | 1 high · 1 med | [View →](./axes/overengineering/index.md) |
-| Tests | 🟥🟥🟥🟥⬜⬜⬜⬜⬜⬜ 39% covered | 48 high · 20 med · 162 low | [View →](./axes/tests/index.md) |
-| Documentation | 🟨🟨🟨🟨🟨⬜⬜⬜⬜⬜ 52% documented | 24 high · 6 med · 121 low | [View →](./axes/documentation/index.md) |
-| Best Practices | 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ avg 8.1 / 10 | 10 high | [View →](./axes/best-practices/index.md) |
+| Correction | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ 86% OK | 39 high · 14 med | [View →](https://github.com/r-via/anatoly-reports/blob/main/calibrae--rustguard/2026-03-27_151445/axes/correction/index.md) |
+| Utility | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 99% used | 3 high · 1 med | [View →](https://github.com/r-via/anatoly-reports/blob/main/calibrae--rustguard/2026-03-27_151445/axes/utility/index.md) |
+| Duplication | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ 94% unique | 13 high · 9 med | [View →](https://github.com/r-via/anatoly-reports/blob/main/calibrae--rustguard/2026-03-27_151445/axes/duplication/index.md) |
+| Overengineering | 🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ 93% lean | 1 high · 1 med | [View →](https://github.com/r-via/anatoly-reports/blob/main/calibrae--rustguard/2026-03-27_151445/axes/overengineering/index.md) |
+| Tests | 🟥🟥🟥🟥⬜⬜⬜⬜⬜⬜ 39% covered | 48 high · 20 med · 162 low | [View →](https://github.com/r-via/anatoly-reports/blob/main/calibrae--rustguard/2026-03-27_151445/axes/tests/index.md) |
+| Documentation | 🟨🟨🟨🟨🟨⬜⬜⬜⬜⬜ 52% documented | 24 high · 6 med · 121 low | [View →](https://github.com/r-via/anatoly-reports/blob/main/calibrae--rustguard/2026-03-27_151445/axes/documentation/index.md) |
+| Best Practices | 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ avg 8.1 / 10 | 10 high | [View →](https://github.com/r-via/anatoly-reports/blob/main/calibrae--rustguard/2026-03-27_151445/axes/best-practices/index.md) |
 
 ## Critical Findings
 
@@ -32,7 +32,7 @@
 - 🟡 **rustguard-core/src/timers.rs** `REKEY_TIMEOUT` — The doc comment on L38 states 'Don't try to send with a keypair older than this (REJECT_AFTER_TIME + padding)' but RE...
 - 🟡 **rustguard-core/src/timers.rs** `SessionTimers` — Two bugs in the impl block: (1) needs_keepalive (L160): when last_sent is None, sent.unwrap_or(received) sets last_se...
 
-> Showing top 10 of 53 correction findings. See [axes/correction/](./axes/correction/index.md) for the full list.
+> Showing top 10 of 53 correction findings. See [axes/correction/](https://github.com/r-via/anatoly-reports/blob/main/calibrae--rustguard/2026-03-27_151445/axes/correction/index.md) for the full list.
 
 ## Documentation Coverage
 
@@ -55,7 +55,7 @@ Anatoly also generates reference pages in `.anatoly/docs/` for every reviewed mo
 
 Anatoly generated a complete documentation for this project during the audit.
 
-**[Browse the documentation →](./docs/index.md)**
+**[Browse the documentation →](https://github.com/r-via/anatoly-reports/blob/main/calibrae--rustguard/2026-03-27_151445/docs/index.md)**
 
 ---
 
@@ -72,6 +72,7 @@ Run `2026-03-27_151445` · 0.2 min · $0.00
 | estimate | 241ms |
 | triage | 5ms |
 | rag-index | 6.9s |
+| report | 94ms |
 
 </details>
 
@@ -90,4 +91,4 @@ See each axis folder for detailed rating criteria.
 
 </details>
 
-*Generated: 2026-03-27T14:14:55.103Z*
+*Generated: 2026-03-27T14:21:10.390Z*

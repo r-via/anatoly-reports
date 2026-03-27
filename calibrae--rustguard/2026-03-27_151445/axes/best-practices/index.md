@@ -2,6 +2,8 @@
 
 # ✅ Best Practices
 
+> File-level evaluation against language-specific best-practice rules. Starts at 10/10, penalties per violation.
+
 - 📁 **Files with findings:** 8
 - 🎯 **Actions:** 0
 
@@ -28,4 +30,4 @@ File-level evaluation against language-specific Rust best-practice rules. Starts
 
 See the language-specific best-practices prompt for the full rule set.
 
-*Generated: 2026-03-27T14:14:55.119Z*
+*Generated: 2026-03-27T14:21:10.407Z*

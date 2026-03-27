@@ -2,6 +2,8 @@
 
 # 📋 Duplication
 
+> Code clones identified via RAG semantic vector search against the full codebase index.
+
 - 📁 **Files with findings:** 9
 - 🎯 **Actions:** 21
 
@@ -31,4 +33,4 @@ Identifies code clones via RAG semantic vector search against the codebase index
 - **UNIQUE**: No semantically similar function found, or similarity score < 0.75.
 - **DUPLICATE**: Similarity score >= 0.85 with matching logic/behavior. The duplicate target file and symbol are reported.
 
-*Generated: 2026-03-27T14:14:55.109Z*
+*Generated: 2026-03-27T14:21:10.395Z*
