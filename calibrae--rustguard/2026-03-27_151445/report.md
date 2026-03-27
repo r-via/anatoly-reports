@@ -55,23 +55,23 @@ Anatoly also generates reference pages in `.anatoly/docs/` for every reviewed mo
 
 Anatoly generated a complete documentation for this project during the audit.
 
-**[Browse the documentation →](https://github.com/r-via/anatoly-reports/blob/main/calibrae--rustguard/2026-03-27_151008/docs/index.md)**
+**[Browse the documentation →](https://github.com/r-via/anatoly-reports/blob/main/calibrae--rustguard/2026-03-27_151445/docs/index.md)**
 
 ---
 
 <details>
 <summary><strong>Run Details</strong></summary>
 
-Run `2026-03-27_151008` · 0.2 min · $0.00
+Run `2026-03-27_151445` · 0.2 min · $0.00
 
 **Phase durations:**
 
 | Phase | Duration |
 |-------|----------|
-| scan | 120ms |
-| estimate | 237ms |
+| scan | 123ms |
+| estimate | 241ms |
 | triage | 5ms |
-| rag-index | 7.1s |
+| rag-index | 6.9s |
 
 </details>
 
@@ -90,4 +90,4 @@ See each axis folder for detailed rating criteria.
 
 </details>
 
-*Generated: 2026-03-27T14:10:17.798Z*
+*Generated: 2026-03-27T14:14:55.103Z*
