@@ -1,11 +1,11 @@
 [← Back to report](../../public_report.md)
 
-# Correction
+# 🐛 Correction
 
-- **Files with findings:** 26
-- **Actions:** 66
+- 📁 **Files with findings:** 26
+- 🎯 **Actions:** 66
 
-## Shards
+## 📦 Shards
 
 Findings are split into shards of up to 10 files each to keep pages readable and avoid GitHub rendering limits.
 
@@ -13,7 +13,7 @@ Findings are split into shards of up to 10 files each to keep pages readable and
 - [ ] [shard.2.md](./shard.2.md) (10 files — 10 NEEDS_REFACTOR)
 - [ ] [shard.3.md](./shard.3.md) (6 files — 6 NEEDS_REFACTOR)
 
-## Verdict Distribution
+## 📈 Verdict Distribution
 
 | Verdict | Count | % |
 |---------|-------|---|
@@ -23,7 +23,7 @@ Findings are split into shards of up to 10 files each to keep pages readable and
 
 ---
 
-## Methodology
+## 📖 Methodology
 
 **Model:** sonnet
 
@@ -35,4 +35,4 @@ Finds bugs, logic errors, incorrect types, and unsafe operations. Only flags rea
 - **NEEDS_FIX**: A real bug, logic error, or type mismatch that would cause incorrect behavior at runtime.
 - **ERROR**: A critical bug that would cause a crash, data loss, or security breach.
 
-*Generated: 2026-03-27T13:25:43.751Z*
+*Generated: 2026-03-27T14:00:01.014Z*

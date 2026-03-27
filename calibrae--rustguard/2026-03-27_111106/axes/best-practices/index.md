@@ -1,17 +1,17 @@
 [← Back to report](../../public_report.md)
 
-# Best Practices
+# ✅ Best Practices
 
-- **Files with findings:** 8
-- **Actions:** 0
+- 📁 **Files with findings:** 8
+- 🎯 **Actions:** 0
 
-## Shards
+## 📦 Shards
 
 Findings are split into shards of up to 10 files each to keep pages readable and avoid GitHub rendering limits.
 
 - [ ] [shard.1.md](./shard.1.md) (8 files — 2 CRITICAL, 6 NEEDS_REFACTOR)
 
-## Verdict Distribution
+## 📈 Verdict Distribution
 
 | Metric | Value |
 |--------|-------|
@@ -20,7 +20,7 @@ Findings are split into shards of up to 10 files each to keep pages readable and
 
 ---
 
-## Methodology
+## 📖 Methodology
 
 **Model:** sonnet
 
@@ -28,4 +28,4 @@ File-level evaluation against language-specific Rust best-practice rules. Starts
 
 See the language-specific best-practices prompt for the full rule set.
 
-*Generated: 2026-03-27T13:25:43.765Z*
+*Generated: 2026-03-27T14:00:01.025Z*

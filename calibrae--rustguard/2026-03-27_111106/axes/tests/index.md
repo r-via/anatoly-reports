@@ -1,11 +1,11 @@
 [← Back to report](../../public_report.md)
 
-# Tests
+# 🧪 Tests
 
-- **Files with findings:** 35
-- **Actions:** 0
+- 📁 **Files with findings:** 35
+- 🎯 **Actions:** 0
 
-## Shards
+## 📦 Shards
 
 Findings are split into shards of up to 10 files each to keep pages readable and avoid GitHub rendering limits.
 
@@ -14,7 +14,7 @@ Findings are split into shards of up to 10 files each to keep pages readable and
 - [ ] [shard.3.md](./shard.3.md) (10 files — 10 NEEDS_REFACTOR)
 - [ ] [shard.4.md](./shard.4.md) (5 files — 5 NEEDS_REFACTOR)
 
-## Verdict Distribution
+## 📈 Verdict Distribution
 
 | Verdict | Count | % |
 |---------|-------|---|
@@ -24,7 +24,7 @@ Findings are split into shards of up to 10 files each to keep pages readable and
 
 ---
 
-## Methodology
+## 📖 Methodology
 
 **Model:** haiku
 
@@ -36,4 +36,4 @@ Assesses test coverage quality using coverage data (when available) and test fil
 - **WEAK**: Tests exist but are superficial, missing edge cases, or testing implementation details rather than behavior.
 - **NONE**: No test file or test cases found for this symbol. Types/interfaces with no runtime behavior default to GOOD.
 
-*Generated: 2026-03-27T13:25:43.756Z*
+*Generated: 2026-03-27T14:00:01.019Z*

@@ -1,21 +1,24 @@
 [← Back to Best Practices](./index.md) · [← Back to report](../../public_report.md)
 
-# Best Practices — Shard 1
+# ✅ Best Practices — Shard 1
 
-## Findings
+- [📊 Findings](#-findings)
+- [🔍 Details](#-details)
+
+## 📊 Findings
 
 | File | Verdict | BP Score | Details |
 |------|---------|----------|---------|
-| `rustguard-kmod/src/lib.rs` | CRITICAL | 7.5/10 | [details](#rustguard-kmodsrclibrs) |
-| `rustguard-tun/src/xdp.rs` | CRITICAL | 6.5/10 | [details](#rustguard-tunsrcxdprs) |
-| `rustguard-daemon/src/tunnel.rs` | NEEDS_REFACTOR | 5/10 | [details](#rustguard-daemonsrctunnelrs) |
-| `rustguard-enroll/src/control.rs` | NEEDS_REFACTOR | 6/10 | [details](#rustguard-enrollsrccontrolrs) |
-| `rustguard-tun/src/linux.rs` | NEEDS_REFACTOR | 6.5/10 | [details](#rustguard-tunsrclinuxrs) |
-| `rustguard-kmod/src/cookie.rs` | NEEDS_REFACTOR | 6/10 | [details](#rustguard-kmodsrccookiers) |
-| `rustguard-kmod/src/allowedips.rs` | NEEDS_REFACTOR | 9/10 | [details](#rustguard-kmodsrcallowedipsrs) |
-| `rustguard-tun/src/uring.rs` | NEEDS_REFACTOR | 5/10 | [details](#rustguard-tunsrcuringrs) |
+| `rustguard-kmod/src/lib.rs` | 🔴 CRITICAL | 7.5/10 | [details](#rustguard-kmodsrclibrs) |
+| `rustguard-tun/src/xdp.rs` | 🔴 CRITICAL | 6.5/10 | [details](#rustguard-tunsrcxdprs) |
+| `rustguard-daemon/src/tunnel.rs` | 🟡 NEEDS_REFACTOR | 5/10 | [details](#rustguard-daemonsrctunnelrs) |
+| `rustguard-enroll/src/control.rs` | 🟡 NEEDS_REFACTOR | 6/10 | [details](#rustguard-enrollsrccontrolrs) |
+| `rustguard-tun/src/linux.rs` | 🟡 NEEDS_REFACTOR | 6.5/10 | [details](#rustguard-tunsrclinuxrs) |
+| `rustguard-kmod/src/cookie.rs` | 🟡 NEEDS_REFACTOR | 6/10 | [details](#rustguard-kmodsrccookiers) |
+| `rustguard-kmod/src/allowedips.rs` | 🟡 NEEDS_REFACTOR | 9/10 | [details](#rustguard-kmodsrcallowedipsrs) |
+| `rustguard-tun/src/uring.rs` | 🟡 NEEDS_REFACTOR | 5/10 | [details](#rustguard-tunsrcuringrs) |
 
-## Details
+## 🔍 Details
 
 ### `rustguard-kmod/src/lib.rs` — 7.5/10
 

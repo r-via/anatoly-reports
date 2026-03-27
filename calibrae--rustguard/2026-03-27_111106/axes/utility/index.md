@@ -1,17 +1,17 @@
 [← Back to report](../../public_report.md)
 
-# Utility
+# ♻️ Utility
 
-- **Files with findings:** 3
-- **Actions:** 4
+- 📁 **Files with findings:** 3
+- 🎯 **Actions:** 4
 
-## Shards
+## 📦 Shards
 
 Findings are split into shards of up to 10 files each to keep pages readable and avoid GitHub rendering limits.
 
 - [ ] [shard.1.md](./shard.1.md) (3 files — 1 CRITICAL, 2 NEEDS_REFACTOR)
 
-## Verdict Distribution
+## 📈 Verdict Distribution
 
 | Verdict | Count | % |
 |---------|-------|---|
@@ -20,7 +20,7 @@ Findings are split into shards of up to 10 files each to keep pages readable and
 
 ---
 
-## Methodology
+## 📖 Methodology
 
 **Model:** haiku
 
@@ -32,4 +32,4 @@ Detects dead or low-value code using a pre-computed import/usage graph.
 - **DEAD**: The symbol is exported but imported by 0 files, or is a non-exported symbol with no local references. Likely safe to remove.
 - **LOW_VALUE**: The symbol is used but provides negligible value (trivial wrapper, identity function, unnecessary indirection).
 
-*Generated: 2026-03-27T13:25:43.754Z*
+*Generated: 2026-03-27T14:00:01.017Z*
