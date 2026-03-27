@@ -1,4 +1,4 @@
-[← Back to Correction](./index.md) · [← Back to report](../public_report.md)
+[← Back to Correction](./index.md) · [← Back to report](../../public_report.md)
 
 # Correction — Shard 3
 

@@ -1,4 +1,4 @@
-[← Back to Best Practices](./index.md) · [← Back to report](../public_report.md)
+[← Back to Best Practices](./index.md) · [← Back to report](../../public_report.md)
 
 # Best Practices — Shard 1
 

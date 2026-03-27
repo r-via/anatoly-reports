@@ -1,4 +1,4 @@
-[← Back to Duplication](./index.md) · [← Back to report](../public_report.md)
+[← Back to Duplication](./index.md) · [← Back to report](../../public_report.md)
 
 # Duplication — Shard 1
 

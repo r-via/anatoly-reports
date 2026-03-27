@@ -1,4 +1,4 @@
-[← Back to report](../public_report.md)
+[← Back to report](../../public_report.md)
 
 # Overengineering
 
@@ -31,4 +31,4 @@ Evaluates whether complexity is justified by actual requirements.
 - **OVER**: Unnecessary abstractions, premature generalization, factory patterns for single use, excessive configuration for simple behavior.
 - **ACCEPTABLE**: Some complexity present but justified by requirements.
 
-*Generated: 2026-03-27T12:58:34.604Z*
+*Generated: 2026-03-27T13:02:57.575Z*

@@ -1,4 +1,4 @@
-[← Back to report](../public_report.md)
+[← Back to report](../../public_report.md)
 
 # Utility
 
@@ -30,4 +30,4 @@ Detects dead or low-value code using a pre-computed import/usage graph.
 - **DEAD**: The symbol is exported but imported by 0 files, or is a non-exported symbol with no local references. Likely safe to remove.
 - **LOW_VALUE**: The symbol is used but provides negligible value (trivial wrapper, identity function, unnecessary indirection).
 
-*Generated: 2026-03-27T12:58:34.602Z*
+*Generated: 2026-03-27T13:02:57.574Z*
